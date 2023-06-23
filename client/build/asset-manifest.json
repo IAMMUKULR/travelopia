@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0a6bfd59.css",
+    "main.js": "/static/js/main.4d78711d.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/USA-Arches-National-Park-UT-e1640034251676.png": "/static/media/USA-Arches-National-Park-UT-e1640034251676.9b1edde84d6d50902f96.png",
+    "static/media/tree.jpg": "/static/media/tree.244ff4be7ad5b3f568ad.jpg",
+    "static/media/samuel-chenard-7wI5SECPq9Q-unsplash.jpg": "/static/media/samuel-chenard-7wI5SECPq9Q-unsplash.330856fcbe39909c98f6.jpg",
+    "static/media/Santorini.jpg": "/static/media/Santorini.0d4ad492ca511f03be77.jpg",
+    "static/media/hero-3-e1640030498707.jpg": "/static/media/hero-3-e1640030498707.d1812d1e507c2b5b1705.jpg",
+    "static/media/Quark-Expeditions_Under-the-Northern-Lights_zodiac_cruise_bernstorff_isfjord_eastgreenland_acaciajohnson__4.jpg": "/static/media/Quark-Expeditions_Under-the-Northern-Lights_zodiac_cruise_bernstorff_isfjord_eastgreenland_acaciajohnson__4.f701f81e74d5e8955486.jpg",
+    "static/media/MOORINGS-BAHAMAS-UPTOPMEDIA-141-1-e1640033699282.jpg": "/static/media/MOORINGS-BAHAMAS-UPTOPMEDIA-141-1-e1640033699282.db081e266af445de0a9f.jpg",
+    "static/media/Carousel-shutterstock_386710591-Civita-di-Bagnoregio.jpg": "/static/media/Carousel-shutterstock_386710591-Civita-di-Bagnoregio.fc1a671ad64982c83ece.jpg",
+    "index.html": "/index.html",
+    "main.0a6bfd59.css.map": "/static/css/main.0a6bfd59.css.map",
+    "main.4d78711d.js.map": "/static/js/main.4d78711d.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a6bfd59.css",
+    "static/js/main.4d78711d.js"
+  ]
+}
