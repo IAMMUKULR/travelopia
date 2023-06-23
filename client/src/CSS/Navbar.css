@@ -1,0 +1,14 @@
+
+@media screen and (max-width: 1024px) {
+  .NB_02 {
+    @apply flex-col;
+  }
+  .NB_05 {
+    @apply flex-col gap-[0rem];
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 2560px) {
+    .NB_05{
+        @apply gap-[4rem];
+    }
+}

@@ -1,0 +1,114 @@
+.bg-img{
+    background-image:url('../Travelopia/USA-Arches-National-Park-UT-e1640034251676.png');
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.H-01{
+    @apply font-bold;
+}
+.H-02{
+    @apply text-center ;
+}
+.H-03{
+    @apply text-center ;
+}
+/* @media screen and (max-width:430px){
+    .H-06{
+        @apply max-w-[15rem]
+    }
+    .H-04{
+        @apply hidden;
+    }
+} */
+@media screen and (max-width:720px){
+    .H-04{
+        @apply hidden;
+    }
+    .H-06{
+        @apply max-w-[15rem]
+    }
+    .H-08{
+        @apply grid grid-cols-2 gap-20;
+    }
+    .H-09{
+        @apply hidden;
+    }
+    .H-11{
+        @apply flex;
+    }
+
+    .FC{
+        @apply grid gap-8 md:grid-cols-2 lg:grid-cols-3;
+    }
+    
+}
+@media screen and (max-width: 1024px){
+    .H-02{
+        @apply text-xs mt-[2rem];
+    }
+    .H-03{
+        @apply text-xl ;
+    }
+}
+@media screen and (min-width:720px) and (max-width:1024px){
+    .H-06{
+        @apply max-w-[25rem]
+    }
+    .H-08{
+        @apply flex  space-x-10;
+    }
+    .H-09{
+        @apply w-[100%]  flex justify-center items-center mx-auto;
+    }
+    .H-10{
+        @apply w-[100%] grid grid-cols-3 grid-rows-2;
+    }
+    .H-09 img {
+        @apply w-[100%] h-[100%] ;
+    }
+    .H-11{
+        @apply hidden;
+    }
+
+        .FC{
+        @apply grid gap-8 md:grid-cols-2 lg:grid-cols-3 ;
+    }
+    
+    
+   
+}
+@media screen and (min-width: 1024px) and (max-width:2560px){
+    .H-06{
+        @apply max-w-[45rem] text-xl leading-7;
+    }
+    .H-02{
+        @apply text-base mt-[2rem];
+    }
+    .H-03{
+        @apply text-4xl ;
+    }
+    .H-08{
+        @apply flex  space-x-10;
+    }
+    .H-09{
+        @apply w-[100%] flex justify-center items-center mx-auto;
+    }
+    .H-10{
+        @apply w-[100%] grid grid-cols-3 grid-rows-2;
+    }
+    .H-09 img {
+        @apply  w-[100%] h-[100%];
+    }
+    .H-11{
+        @apply hidden;
+    }
+    .FC{
+        @apply flex justify-evenly ;
+    }
+}
+.form-bg{
+    background-image: url("../Travelopia/tree.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
