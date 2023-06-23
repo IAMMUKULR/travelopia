@@ -1,13 +1,8 @@
 import Navbar from "./components/Navbar";
 import "./CSS/HomePage.css";
-// import img1 from "../Travelopia/Carousel-shutterstock_386710591-Civita-di-Bagnoregio.jpg";
-// import img2 from "..Travelopia/samuel-chenard-7wI5SECPq9Q-unsplash.jpg";
-// import img3 from "..Travelopia/MOORINGS-BAHAMAS-UPTOPMEDIA-141-1-e1640033699282.jpg";
-// import img4 from "../Travelopia/Quark-Expeditions_Under-the-Northern-Lights_zodiac_cruise_bernstorff_isfjord_eastgreenland_acaciajohnson__4.jpg";
-// import img5 from "../Travelopia/hero-3-e1640030498707.jpg";
-// import img6 from "../Travelopia/Santorini.jpg";
-// import a from "../"
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import img1 from "../src/Travelopia/Carousel-shutterstock_386710591-Civita-di-Bagnoregio.jpg";
 import img5 from "../src/Travelopia/hero-3-e1640030498707.jpg";
 import img3 from "../src/Travelopia/MOORINGS-BAHAMAS-UPTOPMEDIA-141-1-e1640033699282.jpg";
@@ -116,6 +111,8 @@ const interest = [
 const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const [alert, setalert] = useState(null);
+
   const handlePrevSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide === 0 ? 4 : prevSlide - 1));
   };
@@ -183,6 +180,47 @@ const HomePage = () => {
     e.preventDefault();
     setShowModal(true);
   }
+  const notify = () => {
+    if (alert === true) {
+      toast.success("Trip Created Successfully!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    } else if (alert === null) {
+      const id = toast.loading("🦄 Wow so easy!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      toast.update(id, {
+        render: "Trip Created Successfully!",
+        type: "success",
+        isLoading: false,
+      });
+    } else {
+      toast.error("❌ Failed to create Trip", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  };
 
   function submitQuery(e) {
     e.preventDefault();
@@ -196,15 +234,31 @@ const HomePage = () => {
         },
       })
       .then((res) => {
-        console.log(res.statusText);
-        
+        console.log(res);
+
+        {
+          (async () => {
+            await setalert(true);
+            await console.log(alert);
+            await window.location.reload();
+            await notify();
+          })();
+        }
       })
       .catch((err) => {
         console.log(err);
+
+        {
+          (async () => {
+            await setalert(false);
+            await window.location.reload();
+            await notify();
+          })();
+        }
       });
   }
+
   return (
-    
     <div className="w-[100dvw]  overflow-hidden">
       <div className="H-01 bg-img ">
         <Navbar />
@@ -589,10 +643,13 @@ const HomePage = () => {
                         <button
                           className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                           type="button"
-                          onClick={submitQuery}
+                          onClick={(e) => {
+                            submitQuery(e);
+                          }}
                         >
                           Submit
                         </button>
+                        <ToastContainer />
                       </div>
                     </div>
                   </div>

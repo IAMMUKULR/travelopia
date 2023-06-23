@@ -32,7 +32,7 @@ export default function Dashboard() {
 
         <ul class="logout">
           <li>
-            <a id="logout" href="/">
+            <a id="logout" href="/admin/login">
               <i class="fa fa-power-off fa-2x"></i>
               <span onClick={(e) => logout(e)} class="nav-text">
                 Logout
