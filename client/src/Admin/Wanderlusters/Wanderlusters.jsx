@@ -57,7 +57,7 @@ export default function EnrolledStudents() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/api/wanderlusters", {
+      .get("https://travelopia-zz3k.onrender.com/api/wanderlusters", {
         headers: {
           "Content-Type": "application/json",
           Authorization: token,

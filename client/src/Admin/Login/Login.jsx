@@ -20,11 +20,15 @@ export default function Login() {
   function adminloginSubmit(e) {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/api/admin/login", adminlogindata, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
+      .post(
+        "https://travelopia-zz3k.onrender.com/api/admin/login",
+        adminlogindata,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
       .then((res) => {
         console.log(res);
         const token = res.data.token;
