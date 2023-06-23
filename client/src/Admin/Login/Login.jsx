@@ -14,7 +14,6 @@ export default function Login() {
     const newData = { ...adminlogindata };
     newData[e.target.id] = e.target.value;
     setAdminLoginData(newData);
-    // console.log(newData);
   }
 
   function adminloginSubmit(e) {

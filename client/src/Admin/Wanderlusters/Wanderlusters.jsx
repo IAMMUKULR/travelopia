@@ -64,9 +64,7 @@ export default function EnrolledStudents() {
         },
       })
       .then((response) => {
-        console.log(response.data.wanderlusters);
         setData(response.data.wanderlusters);
-        console.log(data);
       })
       .catch((err) => {
         console.log(err);

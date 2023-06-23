@@ -141,8 +141,6 @@ const HomePage = () => {
     const newMessage = { ...tripData };
     newMessage[e.target.id] = e.target.value;
     setTripData(newMessage);
-
-    console.log(tripData);
   }
 
   const [showModal, setShowModal] = useState(false);
@@ -151,7 +149,7 @@ const HomePage = () => {
   const [selectedValueInterest, setSelectedValueInterest] = useState([]);
 
   useEffect(() => {
-    console.log(selectedValue, selectedValueInterest);
+    // console.log(selectedValue, selectedValueInterest);
   }, [selectedValue, selectedValueInterest]);
 
   const onSelect = (event) => {
@@ -234,12 +232,9 @@ const HomePage = () => {
         },
       })
       .then((res) => {
-        console.log(res);
-
         {
           (async () => {
             await setalert(true);
-            await console.log(alert);
             await window.location.reload();
             await notify();
           })();
