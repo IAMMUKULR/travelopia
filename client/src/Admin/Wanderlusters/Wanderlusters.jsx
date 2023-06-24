@@ -23,7 +23,8 @@ const columns = [
   },
   {
     name: "Area",
-    selector: (row) => row.no_of_travelers,
+    selector: (row) => row.area.map((x) => x).join(", "),
+    width: "300px",
   },
   {
     name: "Budget",
@@ -31,7 +32,8 @@ const columns = [
   },
   {
     name: "Interests",
-    selector: (row) => row.no_of_travelers,
+    selector: (row) => row.interests.map((x) => x).join(", "),
+    width: "300px",
   },
   {
     name: "Travelers",
@@ -43,7 +45,7 @@ const columns = [
   },
   {
     name: "When",
-    selector: (row) => row.tripDuration,
+    selector: (row) => row.when,
   },
   {
     name: "Planning Stage",
@@ -64,12 +66,13 @@ export default function EnrolledStudents() {
         },
       })
       .then((response) => {
+        console.log(response.data.wanderlusters[20].area);
         setData(response.data.wanderlusters);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, [data]);
+  }, []);
   return (
     <>
       {token ? (
@@ -78,7 +81,12 @@ export default function EnrolledStudents() {
           <div className="enrolled_container">
             <h1>Wanderlusters List</h1>
             <div style={{ margin: "100px" }}>
-              <DataTable className="font-bold" columns={columns} data={data} />
+              <DataTable
+                className="font-bold"
+                columns={columns}
+                data={data}
+                pagination
+              />
             </div>
           </div>
         </>
